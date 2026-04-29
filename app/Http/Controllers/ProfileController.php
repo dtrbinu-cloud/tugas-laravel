@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Http\Requests\ProfileUpdateRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -16,8 +17,14 @@ class ProfileController extends Controller
      */
     public function edit(Request $request): View
     {
+        $myPosts = Post::query()
+            ->where('user_id', $request->user()->id)
+            ->latest()
+            ->get();
+
         return view('profile.edit', [
             'user' => $request->user(),
+            'myPosts' => $myPosts,
         ]);
     }
 
