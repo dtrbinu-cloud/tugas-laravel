@@ -1,6 +1,5 @@
-<p align="center">![Uploading image.png…]()
+<img width="1919" height="884" alt="image" src="https://github.com/user-attachments/assets/dd3addf4-62f5-41ec-91ce-cfcaaff6e89a" />
 
-</p>
 
 ## About Laravel
 
